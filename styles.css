@@ -1,0 +1,145 @@
+:root{
+    --color-white: hsl(0, 0%, 100%);
+    --light-violet: hsl(270, 3%, 87%);
+    --dark-violet: hsl(279, 6%, 55%);
+    --very-dark-violet: hsl(278, 68%, 11%);
+}
+
+*{
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+body{
+    display: flex;
+    flex-direction: row;
+    width: 100vw;
+    font-family: 'Space Grotesk', sans-serif;
+    font-weight: 500;
+}
+
+.left-panel{
+    background: url(./images/bg-main-desktop.png);
+    background-repeat: no-repeat;
+    background-size: cover;
+    min-width: 30vw;
+    max-width: 30vw;
+    min-height: 100vh;
+    align-items: center;
+    justify-content: center;
+    display: flex;
+}
+
+.cards-container{
+    min-height:60vh;
+    min-width: 60vw;
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+}
+
+.card-back{
+    background: url(./images/bg-card-back.png);
+    background-size: cover;
+    background-repeat: no-repeat;
+    width: 447px;
+    height: 245px;
+    margin-left: 50%;
+}
+
+.card-front{
+    background: url(./images/bg-card-front.png);
+    background-size: cover;
+    background-repeat: no-repeat;
+    width: 447px;
+    height: 245px;
+    margin-left: 25%;
+}
+
+.form-panel{
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: 0 auto;
+}
+
+.form-container{
+    min-width: 24vw;
+    max-width: 24vw;
+}
+
+form{
+    display: grid;
+    grid-auto-columns: 1fr; 
+    grid-template-rows: 1fr 1fr 1fr 1fr;
+    gap: 10px 0px; 
+}
+
+form label{
+    color:var(--very-dark-violet);
+    font-size: 11px;
+    font-weight: bold;
+    letter-spacing: 2px;
+    line-height: 24px;
+}
+
+form input{
+    height: 40px;
+    border: 1px solid var(--light-violet);
+    border-radius: 8px;
+    padding: 0px 8px;
+}
+
+form input::placeholder{
+    font-family: 'Space Grotesk', sans-serif;
+    font-weight: 500;
+    margin-left: 10px;
+}
+
+.name-label, .card-label{
+    display: block;
+}
+
+.date-label, .cvc-label{
+    display: inline;
+}
+
+.bottom-inputs{
+    display: flex;
+    justify-content: space-between;
+}
+
+button{
+    border:none;
+    background: var(--very-dark-violet);
+    color: var(--color-white);
+    font-family: 'Space Grotesk', sans-serif;
+    font-size: 15px;
+    letter-spacing: 1px;
+    cursor: pointer;
+    border-radius: 8px;
+}
+
+button:hover{
+    background: hsl(277, 68%, 6%);
+}
+
+.date-container, .cvc-container{
+    display: grid;
+    grid-auto-columns: 1fr; 
+    grid-template-rows: 0.5fr 1fr;
+}
+
+.long{
+    width: 100%;
+}
+
+.date-inputContainer input{
+    width: 40%;
+}
+
