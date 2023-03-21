@@ -49,6 +49,8 @@ body{
     width: 447px;
     height: 245px;
     margin-left: 50%;
+    display: flex;
+    justify-content: end;
 }
 
 .card-front{
@@ -58,7 +60,76 @@ body{
     width: 447px;
     height: 245px;
     margin-left: 25%;
+    padding: 28px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    gap: 0px 10px;
 }
+
+
+.date-field{
+    width: 8px;
+    height: 12px;
+    border: 1.5px solid white;
+    border-radius: 4px;
+}
+
+.card-logo{
+    margin-bottom: 28px;
+}
+
+.numbers-container{
+    display: flex;
+    justify-content: space-between;
+    flex-direction: row;
+    margin: 10px 0px;
+    font-size: 28px;
+    letter-spacing: 4px;
+}
+
+.number-field{
+    width: 14px;
+    height: 20px;
+    border: 2px solid white;
+    border-radius: 6px;
+}
+
+.number-block{
+    display: flex;
+    flex-direction: row;
+    gap: 5px 5px;
+    color: white;
+    align-items: center;
+}
+
+.bottom-name{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    text-transform: uppercase;
+    letter-spacing: 1.5px;
+    font-weight: 300;
+    font-size: 14px;
+}
+
+.mmyy{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 14px;
+    gap: 0px 3px;
+}
+
+.card-back-content{
+    display: flex;
+    justify-content: end;
+    flex-direction: row;
+    margin: auto 50px;
+    gap: 0px 3px;
+    color: white;
+}
+
 
 .form-panel{
     height: 100vh;
@@ -68,9 +139,54 @@ body{
     margin: 0 auto;
 }
 
+.form-panel-hidden{
+    display: none;
+}
+
+.complete-panel{
+    height: 100vh;
+    display: none;
+    justify-content: center;
+    align-items: center;
+    margin: 0 auto;
+}
+
+.complete-panel-hidden{
+    display: none;
+}
+
+p{
+    color: red;
+    font-size: 12px;
+}
+
 .form-container{
     min-width: 24vw;
     max-width: 24vw;
+}
+
+.complete-state-container{
+    display: flex;
+    min-width: 24vw;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 25px 0px;
+}
+
+.thanks{
+    font-size: 28px;
+    color: var(--very-dark-violet);
+    letter-spacing: 3px;
+}
+
+.desc{
+    color: var(--dark-violet);
+}
+
+.button-continue{
+    width: 100%;
+    height: 3vw;
 }
 
 form{
@@ -93,6 +209,9 @@ form input{
     border: 1px solid var(--light-violet);
     border-radius: 8px;
     padding: 0px 8px;
+    border-image-slice: 1;
+    border-width: 1px;
+
 }
 
 form input::placeholder{
@@ -143,3 +262,26 @@ button:hover{
     width: 40%;
 }
 
+@media only screen and (max-width: 700px) {
+    body{
+        display: block;
+        width: 100vw;
+    }
+
+    .left-panel{
+        min-height:20vh;
+        min-width: 100vw;
+    }
+
+    .cards-container{
+        display: none;
+    }
+    
+    .form-panel{
+        height: 80vh;
+    }
+
+    .form-container{
+        max-width: 90vw;
+    }
+}
